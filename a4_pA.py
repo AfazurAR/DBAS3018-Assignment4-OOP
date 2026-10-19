@@ -6,15 +6,15 @@ class Car:
         self.model = model 
         self. year = year
 
-    def display_info (self):          
-        return f"Car information: Make: {self.make}, Model: {self.model}, Year: {self.year}"
+    def display_info(self):          
+        print(f"Car information: Make: {self.make}, Model: {self.model}, Year: {self.year}")
 
 Car1 = Car("Toyota", "Corolla", 2020)
 Car2 = Car("Honda", "Civic", 2021)
 
 # print (Car1.make, Car1.model, Car1.year)
 # print (Car1) 
-print (Car1.display_info())
-print (Car2.display_info())
+Car1.display_info()
+Car2.display_info()
 
 
