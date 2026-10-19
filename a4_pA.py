@@ -10,8 +10,24 @@ class Car:
         self.model = model 
         self. year = year
 
+        self.__mileage = 0 # Encapsulating mileage. 
+
+
     def display_info(self):          
         print(f"Car information: Make: {self.make}, Model: {self.model}, Year: {self.year}")
+
+
+# ===================== 
+# Encapsulation
+# =====================
+
+
+    def get_mileage(self): 
+        return self.__mileage
+
+    def set_mileage (self, new_mileage): 
+        if new_mileage > 0: 
+            self.__mileage = new_mileage
 
 Car1 = Car("Toyota", "Corolla", 2020)
 Car2 = Car("Honda", "Civic", 2021)
@@ -46,3 +62,14 @@ print(f"First Electric Car's Battery size is: {eCar1.battery_size}")
 # To call battery information 
 
 eCar1.describe_battery()
+
+
+
+print (f"Car 1 make: {Car1.make}, Getting initial mileage: {Car1.get_mileage()}")
+Car1.set_mileage(10)
+print (f"Car 1 make: {Car1.make}, Getting new mileage after positive input: {Car1.get_mileage()}")
+
+
+print (f"Car 1 make: {Car1.make}, Getting initial mileage: {Car1.get_mileage()}")
+Car1.set_mileage(-100)
+print (f"Car 1 make: {Car1.make}, Getting new mileage after negative input: {Car1.get_mileage()}")
