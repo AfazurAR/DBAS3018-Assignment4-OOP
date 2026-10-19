@@ -1,4 +1,8 @@
+
+# =====================
 # defining the class 
+# =====================
+
 class Car:
 # defining the function with __init__ method 
     def __init__(self, make, model , year):
@@ -17,4 +21,11 @@ Car2 = Car("Honda", "Civic", 2021)
 Car1.display_info()
 Car2.display_info()
 
+# ===================== 
+# Inheritance 
+# =====================
 
+class ElectricCar(Car): 
+    def __init__(self, make, model, year, battery_size): 
+        super().__init__(make, model, year)
+        self.battery_size = battery_size
