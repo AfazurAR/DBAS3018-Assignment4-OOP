@@ -30,7 +30,10 @@ class ElectricCar(Car):
         super().__init__(make, model, year)
         self.battery_size = battery_size
 
-eCar1 = ElectricCar("Hundai", "Sonata", 2026, 30)
+    def describe_battery(self):
+        print(f"First Electric Car's  Battery information: {self.battery_size} kwh")
+
+eCar1 = ElectricCar("Hyundai","Sonata", 2024, 30)
 
 # To display all elements of Electrict Car1
 
@@ -39,3 +42,7 @@ eCar1.display_info()
 # To display only the Battery Size
 
 print(f"First Electric Car's Battery size is: {eCar1.battery_size}") 
+
+# To call battery information 
+
+eCar1.describe_battery()
