@@ -1,5 +1,5 @@
 # defining the class 
-class Cars:
+class Car:
 # defining the function with __init__ method 
     def __init__(self, make, model , year):
         self.make = make 
@@ -7,13 +7,14 @@ class Cars:
         self. year = year
 
     def display_info (self):          
-        return f"{self.make} {self.model} {self.year}"
+        return f"Car information: Make: {self.make}, Model: {self.model}, Year: {self.year}"
 
-Car1 = Cars("Toyota", "Corolla", 2020)
-cart2 = Cars("Honda", "Civic", 2021)
+Car1 = Car("Toyota", "Corolla", 2020)
+Car2 = Car("Honda", "Civic", 2021)
 
 # print (Car1.make, Car1.model, Car1.year)
 # print (Car1) 
 print (Car1.display_info())
-print (cart2.display_info())
+print (Car2.display_info())
+
 
