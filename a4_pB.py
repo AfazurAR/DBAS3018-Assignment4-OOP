@@ -1,14 +1,14 @@
 
-# ===========================
-# Part B - Plant OOP Project
-# ===========================
+# =====================================
+# Part B - Plant Nursery Management System
+# =====================================
 
 # ===========================
 # Parent Class - Plant
 # ===========================
 
 class Plant: 
-    total_plants = 0    # Class variable 
+    total_plants = 0    # Class variable - Total number of plants created
 
     # Constructor and instance variables
     def __init__(self, name, plant_type, height): 
@@ -26,7 +26,7 @@ class Plant:
     # Class method - Display total number of plants 
     @classmethod 
     def show_total_plants(cls): 
-        print(f"Total Plants in my collection: {cls.total_plants}")
+        print(f"Total Plants in the nursery: {cls.total_plants}")
 
     # Static method - Check whether a height is positive 
     @staticmethod
@@ -45,10 +45,10 @@ class Herb(Plant):
 
     # Instance method - Check herb height 
     def check_height(self): 
-        if self.height <=3: 
-            print (f"{self.name} is within the 3-foot herb height limit.")
+        if self.height <= 3: 
+            print (f"{self.name} is within the nursery's 3-foot herb height limit.")
         else: 
-            print (f"{self.name} exceeds the 3-foot herb height limit.") 
+            print (f"{self.name} exceeds the nursery's 3-foot herb height limit.") 
 
 # =====================================
 # Creating Plant objects
@@ -58,7 +58,7 @@ plant1 = Plant ("Rose", "Shrub", 3)
 plant2 = Plant("Mango", "Tree", 12)
 
 
-# Calling the instance method
+# Calling Plant instance methods
 plant1.display_plant()
 plant2.display_plant()
 
@@ -89,8 +89,8 @@ Plant.show_total_plants()
 # Calling the static method
 # =====================================
 
-print(f"Is 2 feet a valid height? {Plant.is_valid_height(2)}")
-print(f"Is -1 foot a valid height? {Plant.is_valid_height(-1)}")
+print(f"Is 2 feet a valid plant height? {Plant.is_valid_height(2)}")
+print(f"Is -1 foot a valid plant height? {Plant.is_valid_height(-1)}")
 
 # Accessing instance variables directly
 
