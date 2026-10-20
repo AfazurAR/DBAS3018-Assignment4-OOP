@@ -98,4 +98,4 @@ print (f"Plant 1 - Plant Name: {plant1.name}, Plant type : {plant1.plant_type}, 
 print (f"Plant 2 - Plant Name: {plant2.name}, Plant type : {plant2.plant_type}, Plant height:  {plant2.height}")
 
 
-
+# Ready for Marking 
