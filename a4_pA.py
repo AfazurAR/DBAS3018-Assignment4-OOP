@@ -112,3 +112,23 @@ class Rectangle (Shape):
 r1 = Rectangle (5, 2)
 
 r1.area()
+
+
+# =====================
+# Object Interaction
+# =====================
+
+class Book: 
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+    
+
+    def display_book(self):          
+        print(f"Book information: Title: {self.title}, Author: {self.author}")
+
+book1 = Book("Lord of the Rings", "Tolkien")
+book2 = Book("The Vinchi Code", "Dan Brown")
+
+book1.display_book()
+book2.display_book()
