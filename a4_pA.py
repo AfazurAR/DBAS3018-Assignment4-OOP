@@ -130,5 +130,24 @@ class Book:
 book1 = Book("Lord of the Rings", "Tolkien")
 book2 = Book("The Vinchi Code", "Dan Brown")
 
-book1.display_book()
-book2.display_book()
+# book1.display_book()
+# book2.display_book()
+
+class Library: 
+    def __init__(self): 
+        self.books = []
+
+    def add_book(self, book): 
+        self.books.append(book)
+
+    def display_books(self): 
+        for book in self.books: 
+            book.display_book()
+
+
+library1 = Library()
+
+library1.add_book(book1)
+library1.add_book(book2)
+
+library1.display_books()
