@@ -29,6 +29,8 @@ class Car:
         if new_mileage > 0: 
             self.__mileage = new_mileage
 
+# ======================
+
 Car1 = Car("Toyota", "Corolla", 2020)
 Car2 = Car("Honda", "Civic", 2021)
 
@@ -64,6 +66,7 @@ print(f"First Electric Car's Battery size is: {eCar1.battery_size}")
 eCar1.describe_battery()
 
 
+# Accessing Encapsulated information and change it. 
 
 print (f"Car 1 make: {Car1.make}, Getting initial mileage: {Car1.get_mileage()}")
 Car1.set_mileage(10)
@@ -73,3 +76,39 @@ print (f"Car 1 make: {Car1.make}, Getting new mileage after positive input: {Car
 print (f"Car 1 make: {Car1.make}, Getting initial mileage: {Car1.get_mileage()}")
 Car1.set_mileage(-100)
 print (f"Car 1 make: {Car1.make}, Getting new mileage after negative input: {Car1.get_mileage()}")
+
+
+# ===================== 
+# Polymorphism
+# =====================
+
+# Defining parent class 
+class Shape: 
+    def area(self): 
+        pass 
+
+# Defining child class 
+class Circle (Shape): 
+    def __init__ (self, radius): 
+        self.radius = radius
+     
+
+    def area (self): 
+        print (3.14*self.radius * self.radius)
+
+
+c1 = Circle(5)
+
+c1.area()
+
+class Rectangle (Shape):
+    def __init__ (self, height, width): 
+        self.height = height 
+        self.width = width 
+
+    def area (self): 
+        print (self.height * self.width)
+
+r1 = Rectangle (5, 2)
+
+r1.area()
